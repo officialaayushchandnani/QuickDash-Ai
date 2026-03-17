@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode settings from Vite */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    
+    /* Interoperability settings */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Strictness and Linting - This is the recommended change */
+    // Enabling 'strict' mode is a best practice. It turns on a suite of checks
+    // (like strictNullChecks and noImplicitAny) that help prevent common errors.
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path Aliases for clean imports */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./client/*"],
+      "@shared/*": ["./shared/*"]
+    }
+  },
+  "include": [
+    "client",
+    "server",
+    "shared",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
